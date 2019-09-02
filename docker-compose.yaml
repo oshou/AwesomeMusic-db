@@ -7,7 +7,7 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: testdb
+      MYSQL_DATABASE: work
       TZ: "Asia/Tokyo"
     working_dir: /var/lib/mysql
     command: mysqld --sql_mode=""
