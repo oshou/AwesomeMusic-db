@@ -10,6 +10,6 @@ services:
       MYSQL_DATABASE: work
       TZ: "Asia/Tokyo"
     working_dir: /var/lib/mysql
-    command: mysqld --sql_mode=""
+    command: mysqld --sql_mode="" --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
     #volumes:
     #  - ./db:/var/lib/mysql
