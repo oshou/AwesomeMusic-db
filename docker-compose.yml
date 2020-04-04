@@ -1,8 +1,8 @@
-version: "3"
+version: "2"
 services:
   mysql:
-    build: .
     container_name: mysql
+    build: .
     ports:
       - 3306:3306
     environment:
@@ -10,6 +10,6 @@ services:
       MYSQL_DATABASE: $MYSQL_DATABASE
       TZ: $MYSQL_TIMEZONE
     working_dir: /var/lib/mysql
-    command: mysqld --sql_mode="" --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    command: mysqld
     #volumes:
     #  - ./db:/var/lib/mysql
