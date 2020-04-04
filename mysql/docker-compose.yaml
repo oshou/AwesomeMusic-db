@@ -1,8 +1,8 @@
 version: "3"
 services:
   mysql:
-    build: .
     container_name: mysql
+    build: .
     ports:
       - 3306:3306
     environment:
@@ -11,5 +11,18 @@ services:
       TZ: $MYSQL_TIMEZONE
     working_dir: /var/lib/mysql
     command: mysqld --sql_mode="" --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    restart: always
     #volumes:
     #  - ./db:/var/lib/mysql
+
+    #postgres:
+    #  container_name: postgres
+    #  image: postgres:12-alpine
+    #  ports:
+    #    - 5432:5432
+    #  environment:
+    #    POSTGRES_USER: root
+    #    POSTGRES_PASSWORD: password
+    #    POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    #  user: root
+    #  restart: always
