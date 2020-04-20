@@ -3,3 +3,5 @@ db/*
 
 # Temporary config
 .env
+
+Dockerfile
